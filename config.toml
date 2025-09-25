@@ -7,6 +7,7 @@ auto-save = true
 cursorline = true
 cursorcolumn = true
 bufferline = "always"
+end-of-line-diagnostics = "hint"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -47,3 +48,6 @@ skip-levels = 1
 
 [editor.file-picker]
 hidden = false
+
+[editor.inline-diagnostics]
+cursor-line = "warning" # show warnings and errors on the cursorline inline
