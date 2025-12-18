@@ -16,14 +16,10 @@ file-types = ["py", "ipynb"]
 comment-token = "#"
 shebangs = ["python"]
 
+
 [language-server.ty] 
 command = "uvx" 
 args = ["ty", "server"]
-
-
-
-
-
 
 
 [language-server.ruff]
@@ -101,7 +97,6 @@ reportUnusedCallResult = false
 [language-server.scls]
 command = "simple-completion-language-server"
 
-
 [language-server.scls.config]
 max_completion_items = 100           # set max completion results len for each group: words, snippets, unicode-input
 feature_words = true                 # enable completion by word
@@ -119,3 +114,16 @@ feature_citations = false            # enable citation completion (only on `cita
 name = "go"
 auto-format = true
 formatter = { command = "goimports" }
+
+
+
+# Nix
+[[language]]
+name = "nix"
+language-servers = ["nil"]
+file-types = ["nix"]
+formatter.command = "nixfmt"
+auto-format = true
+
+[language-server.nil]
+command = "nil"
